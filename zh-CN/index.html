@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#101211">
+  <title>Orfreon — 实验性外核</title>
+  <meta name="description" content="Orfreon 是一个规划中的实验性外核项目，探索更自由、更灵活的未来操作系统基础。">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:site_name" content="Orfreon">
+  <meta property="og:title" content="Orfreon — 自由，始于内核。">
+  <meta property="og:description" content="Orfreon 官方预览网站：一个面向未来操作系统的实验性外核项目。">
+    <link rel="alternate" hreflang="en" href="../index.html">
+  <link rel="alternate" hreflang="zh-CN" href="../zh-CN/index.html">
+  <link rel="alternate" hreflang="zh-TW" href="../zh-TW/index.html">
+  <link rel="alternate" hreflang="x-default" href="../index.html">
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">跳转至主要内容</a>
+
+  <header class="site-header" id="top">
+    <div class="shell header-inner">
+      <a class="wordmark" href="#top">Orfreon</a>
+      <nav aria-label="主导航">
+        <ul>
+          <li><a href="#about">关于</a></li>
+          <li><a href="#vision">愿景</a></li>
+          <li><a href="#ecosystem">生态系统</a></li>
+          <li><a class="nav-github" href="https://github.com/Evan-Windproof/Orfreon">GitHub</a></li>
+          <li class="language-item"><div class="language-switch" role="group" aria-label="语言选择"><a href="../index.html" lang="en">EN</a><a href="../zh-CN/index.html" lang="zh-CN" aria-current="page">简中</a><a href="../zh-TW/index.html" lang="zh-TW">繁中</a></div></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="hero shell" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">实验性外核</p>
+        <h1 id="hero-title">Orfreon</h1>
+        <p class="tagline">自由，始于内核。</p>
+        <p class="hero-description">一个探索更自由、更灵活的未来操作系统基础的实验性外核项目。</p>
+        <p class="hero-status"><span class="status-dot" aria-hidden="true"></span>未来推出，敬请期待。</p>
+      </div>
+
+      <figure class="architecture">
+        <figcaption>规划中的架构</figcaption>
+        <ol class="architecture-stack" role="list">
+          <li class="architecture-layer">
+            <span>库操作系统（LibOS）</span>
+            <span class="layer-role">操作系统抽象层</span>
+          </li>
+          <li class="architecture-layer architecture-core">
+            <span>Orfreon</span>
+            <span class="layer-role">资源保护</span>
+          </li>
+          <li class="architecture-layer">
+            <span>硬件</span>
+            <span class="layer-role">物理资源</span>
+          </li>
+        </ol>
+      </figure>
+    </section>
+
+    <div class="shell">
+      <section class="section about" id="about" aria-labelledby="about-title">
+        <h2 class="section-label" id="about-title">关于</h2>
+        <div class="section-content">
+          <p class="about-lede">精简的内核，为不同操作系统保留自由度。</p>
+          <p>Orfreon 探索外核（Exokernel）模型：内核主要负责分配硬件资源并执行保护机制，更高层的操作系统抽象由库操作系统（LibOS）提供。</p>
+          <p>通过将资源保护机制与操作系统策略分离，这一设计旨在让不同的 LibOS 实现自行选择抽象方式，同时共享同一内核基础。</p>
+        </div>
+      </section>
+
+      <section class="section" id="vision" aria-labelledby="vision-title">
+        <div class="section-heading">
+          <p class="section-label">愿景</p>
+          <h2 id="vision-title">核心原则</h2>
+        </div>
+        <ul class="principles" role="list">
+          <li class="principle">
+            <h3>精简内核</h3>
+            <p>让内核职责聚焦于硬件资源共享所需的基础机制。</p>
+          </li>
+          <li class="principle">
+            <h3>资源保护</h3>
+            <p>将受控的资源分配与隔离作为明确的设计目标。</p>
+          </li>
+          <li class="principle">
+            <h3>LibOS 灵活性</h3>
+            <p>让不同的库操作系统能够自由选择自己的策略和抽象方式。</p>
+          </li>
+          <li class="principle">
+            <h3>开放开发</h3>
+            <p>随着项目逐渐成形，公开设计决策与开发进展。</p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="section" id="ecosystem" aria-labelledby="ecosystem-title">
+        <div class="section-heading">
+          <h2 id="ecosystem-title">生态系统</h2>
+          <p class="section-intro">计划基于共同的 Orfreon 内核基础，构建三个相互独立的操作系统。</p>
+        </div>
+        <ul class="projects" role="list">
+          <li>
+            <h3>Evavind</h3>
+            <p>未来的旗舰桌面操作系统。</p>
+            <span class="project-status">规划中</span>
+          </li>
+          <li>
+            <h3>Liberpony</h3>
+            <p>未来以 MLP 为主题的操作系统。</p>
+            <span class="project-status">规划中</span>
+          </li>
+          <li>
+            <h3>Glivand</h3>
+            <p>未来面向移动设备的操作系统。</p>
+            <span class="project-status">规划中</span>
+          </li>
+        </ul>
+      </section>
+
+      <section class="section development" aria-labelledby="development-title">
+        <div class="section-heading">
+          <h2 id="development-title">开发状态</h2>
+          <p class="section-intro">Orfreon 目前仍处于早期规划阶段，尚无可用于生产环境的内核或正式发行版本。</p>
+        </div>
+        <dl class="development-status">
+          <div>
+            <dt>状态</dt>
+            <dd class="current-status"><span class="status-dot" aria-hidden="true"></span>早期规划</dd>
+          </div>
+          <div>
+            <dt>发行版本</dt>
+            <dd>尚未发布</dd>
+          </div>
+          <div>
+            <dt>技术文档</dt>
+            <dd>后续公布</dd>
+          </div>
+        </dl>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <div>
+        <p class="wordmark">Orfreon</p>
+        <p class="footer-note">© 2026 Orfreon. 网站原型 v0.1.2.</p>
+      </div>
+      <p class="footer-status">项目处于早期规划阶段</p>
+      <a href="https://github.com/Evan-Windproof/Orfreon">GitHub</a>
+    </div>
+  </footer>
+</body>
+</html>
