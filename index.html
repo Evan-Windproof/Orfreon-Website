@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#101211">
+  <title>Orfreon — Experimental Exokernel</title>
+  <meta name="description" content="Orfreon is a planned experimental exokernel exploring a freer and more flexible foundation for future operating systems.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Orfreon">
+  <meta property="og:title" content="Orfreon — Freedom Begins at the Kernel.">
+  <meta property="og:description" content="An early preview of Orfreon, a planned experimental exokernel for future operating systems.">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="top">
+    <div class="shell header-inner">
+      <a class="wordmark" href="#top">Orfreon</a>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#vision">Vision</a></li>
+          <li><a href="#ecosystem">Ecosystem</a></li>
+          <li><a class="nav-github" href="https://github.com/Evan-Windproof">GitHub</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="hero shell" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Experimental exokernel</p>
+        <h1 id="hero-title">Orfreon</h1>
+        <p class="tagline">Freedom Begins at the Kernel.</p>
+        <p class="hero-description">An experimental exokernel exploring a freer and more flexible foundation for future operating systems.</p>
+        <p class="hero-status"><span class="status-dot" aria-hidden="true"></span>Coming in the Future — Stay Tuned.</p>
+      </div>
+
+      <figure class="architecture">
+        <figcaption>Proposed architecture</figcaption>
+        <ol class="architecture-stack" role="list">
+          <li class="architecture-layer">
+            <span>Library OS</span>
+            <span class="layer-role">OS abstractions</span>
+          </li>
+          <li class="architecture-layer architecture-core">
+            <span>Orfreon</span>
+            <span class="layer-role">Resource protection</span>
+          </li>
+          <li class="architecture-layer">
+            <span>Hardware</span>
+            <span class="layer-role">Physical resources</span>
+          </li>
+        </ol>
+      </figure>
+    </section>
+
+    <div class="shell">
+      <section class="section about" id="about" aria-labelledby="about-title">
+        <h2 class="section-label" id="about-title">About</h2>
+        <div class="section-content">
+          <p class="about-lede">A small kernel with room for different operating systems.</p>
+          <p>Orfreon explores the exokernel model, which limits the kernel to allocating hardware resources and enforcing protection boundaries. Higher-level operating system abstractions live in a Library OS (LibOS).</p>
+          <p>By separating resource protection from operating system policy, the design aims to let different LibOS implementations choose their own abstractions while sharing a common kernel foundation.</p>
+        </div>
+      </section>
+
+      <section class="section" id="vision" aria-labelledby="vision-title">
+        <div class="section-heading">
+          <p class="section-label">Vision</p>
+          <h2 id="vision-title">Core principles</h2>
+        </div>
+        <ul class="principles" role="list">
+          <li class="principle">
+            <h3>Minimal Core</h3>
+            <p>Keep kernel responsibilities focused on the mechanisms needed to share hardware.</p>
+          </li>
+          <li class="principle">
+            <h3>Resource Protection</h3>
+            <p>Make controlled resource allocation and isolation explicit design goals.</p>
+          </li>
+          <li class="principle">
+            <h3>LibOS Flexibility</h3>
+            <p>Give Library OS implementations room to choose their own policies and abstractions.</p>
+          </li>
+          <li class="principle">
+            <h3>Open Development</h3>
+            <p>Share design decisions and development progress as the project takes shape.</p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="section" id="ecosystem" aria-labelledby="ecosystem-title">
+        <div class="section-heading">
+          <h2 id="ecosystem-title">Ecosystem</h2>
+          <p class="section-intro">Three independent operating systems are planned around a common Orfreon foundation.</p>
+        </div>
+        <ul class="projects" role="list">
+          <li>
+            <h3>Evavind</h3>
+            <p>Future flagship desktop operating system.</p>
+            <span class="project-status">Planned</span>
+          </li>
+          <li>
+            <h3>Liberpony</h3>
+            <p>Future MLP-themed operating system.</p>
+            <span class="project-status">Planned</span>
+          </li>
+          <li>
+            <h3>Glivand</h3>
+            <p>Future mobile-oriented operating system.</p>
+            <span class="project-status">Planned</span>
+          </li>
+        </ul>
+      </section>
+
+      <section class="section development" aria-labelledby="development-title">
+        <div class="section-heading">
+          <h2 id="development-title">Development status</h2>
+          <p class="section-intro">Orfreon is in early planning. No production-ready kernel or release is available.</p>
+        </div>
+        <dl class="development-status">
+          <div>
+            <dt>Status</dt>
+            <dd class="current-status"><span class="status-dot" aria-hidden="true"></span>Early Planning</dd>
+          </div>
+          <div>
+            <dt>Release</dt>
+            <dd>Not Available</dd>
+          </div>
+          <div>
+            <dt>Documentation</dt>
+            <dd>Coming Later</dd>
+          </div>
+        </dl>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <div>
+        <p class="wordmark">Orfreon</p>
+        <p class="footer-note">© 2026 Orfreon. Website prototype v0.1.0.</p>
+      </div>
+      <p class="footer-status">Project in early planning</p>
+      <a href="https://github.com/Evan-Windproof">GitHub</a>
+    </div>
+  </footer>
+</body>
+</html>

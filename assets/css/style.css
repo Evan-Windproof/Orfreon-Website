@@ -1,0 +1,476 @@
+:root {
+  color-scheme: dark;
+  font-family: system-ui, sans-serif;
+  --background: #101211;
+  --surface: #151816;
+  --surface-raised: #1b1f1c;
+  --text: #eef0eb;
+  --muted: #aeb8b0;
+  --line: #303a34;
+  --accent: #a3ceb6;
+  --accent-surface: #212e27;
+  --accent-line: #4c6a58;
+  --mono: ui-monospace, "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  --gutter: clamp(1.125rem, 5vw, 4rem);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--text);
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+h1, h2, h3, p, figure, ol, ul, dl, dd {
+  margin: 0;
+}
+
+h1, h2, h3 {
+  line-height: 1.12;
+  font-weight: 650;
+}
+
+a {
+  color: var(--text);
+  text-underline-offset: 0.25em;
+  transition: color 160ms ease, background-color 160ms ease, border-color 160ms ease;
+}
+
+a:hover {
+  color: var(--accent);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+[id] {
+  scroll-margin-block-start: 1.5rem;
+}
+
+.shell {
+  width: min(100% - 2 * var(--gutter), 72rem);
+  margin-inline: auto;
+}
+
+.skip-link {
+  position: absolute;
+  z-index: 1;
+  inset-block-start: 0.75rem;
+  inset-inline-start: var(--gutter);
+  padding: 0.5rem 0.875rem;
+  background: var(--text);
+  color: var(--background);
+  transform: translateY(calc(-100% - 1rem));
+}
+
+.skip-link:focus {
+  color: var(--background);
+  transform: translateY(0);
+}
+
+.site-header {
+  border-bottom: 1px solid var(--line);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem 1.5rem;
+  min-height: 4.75rem;
+  padding-block: 0.75rem;
+}
+
+.wordmark {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.055em;
+  text-decoration: none;
+  line-height: 1.2;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.375rem clamp(0.65rem, 2.5vw, 1.75rem);
+  padding: 0;
+  list-style: none;
+}
+
+nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  color: var(--muted);
+  font-size: 0.9375rem;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+nav .nav-github {
+  padding-inline: 0.875rem;
+  border: 1px solid var(--line);
+  border-radius: 0.375rem;
+  color: var(--text);
+}
+
+nav .nav-github:hover {
+  border-color: var(--accent-line);
+  background: var(--accent-surface);
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(2rem, 6vw, 6rem);
+  padding-block: clamp(4rem, 9.5vw, 8rem);
+}
+
+.eyebrow, .section-label, .architecture figcaption {
+  color: var(--accent);
+  font: 0.875rem / 1.45 var(--mono);
+  letter-spacing: 0.095em;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  margin-block: 0.6rem 0.9rem;
+  font-size: clamp(3.65rem, 10vw, 8.5rem);
+  letter-spacing: -0.062em;
+  line-height: 0.98;
+}
+
+.tagline {
+  font-size: clamp(1.4rem, 2.5vw, 2.125rem);
+  font-weight: 550;
+  letter-spacing: -0.04em;
+  line-height: 1.25;
+}
+
+.hero-description {
+  max-width: 44ch;
+  margin-top: 1rem;
+  color: var(--muted);
+  font-size: 1.125rem;
+}
+
+.hero-status, .current-status {
+  display: flex;
+  align-items: baseline;
+  gap: 0.625rem;
+  color: var(--accent);
+}
+
+.hero-status {
+  margin-top: 1.75rem;
+  font-family: var(--mono);
+  font-size: 0.875rem;
+}
+
+.status-dot {
+  display: inline-block;
+  flex: 0 0 auto;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.architecture {
+  width: 100%;
+  max-width: 30rem;
+  padding: clamp(1rem, 2.5vw, 1.5rem);
+  border: 1px solid var(--line);
+  border-radius: 0.625rem;
+  background: var(--surface);
+}
+
+.architecture figcaption {
+  margin-bottom: 1.125rem;
+  color: var(--muted);
+}
+
+.architecture-stack {
+  display: grid;
+  gap: 0.75rem;
+  padding: 0;
+  list-style: none;
+}
+
+.architecture-layer {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.125rem 0.75rem;
+  min-height: 3.5rem;
+  padding: 0.625rem 0.875rem;
+  border: 1px solid var(--line);
+  border-radius: 0.25rem;
+  background: var(--surface-raised);
+  font: 0.9375rem / 1.4 var(--mono);
+}
+
+.architecture-layer + .architecture-layer::before {
+  position: absolute;
+  inset-block-end: calc(100% + 1px);
+  inset-inline-start: 50%;
+  width: 1px;
+  height: 0.75rem;
+  background: var(--accent-line);
+  content: "";
+}
+
+.architecture-core {
+  border-color: var(--accent-line);
+  background: var(--accent-surface);
+  color: var(--accent);
+}
+
+.layer-role {
+  color: var(--muted);
+  font-size: 0.875rem;
+}
+
+.section {
+  padding-block: clamp(2.75rem, 6vw, 5.25rem);
+  border-top: 1px solid var(--line);
+}
+
+.about {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  gap: 0.75rem 2rem;
+}
+
+.about .section-label {
+  padding-top: 0.5rem;
+}
+
+.section-content {
+  max-width: 65ch;
+}
+
+.section-content p + p {
+  margin-top: 0.875rem;
+  color: var(--muted);
+}
+
+.about-lede, .section-heading h2 {
+  font-size: clamp(1.75rem, 3.5vw, 2.625rem);
+  font-weight: 650;
+  letter-spacing: -0.045em;
+  line-height: 1.16;
+}
+
+.section-heading {
+  margin-bottom: 1.75rem;
+}
+
+.section-heading .section-label {
+  margin-bottom: 0.625rem;
+}
+
+.section-intro {
+  max-width: 58ch;
+  margin-top: 0.75rem;
+  color: var(--muted);
+}
+
+.principles, .projects {
+  padding: 0;
+  list-style: none;
+}
+
+.principles {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.875rem;
+}
+
+.principle {
+  padding: clamp(1rem, 2.2vw, 1.5rem);
+  border: 1px solid var(--line);
+  border-radius: 0.5rem;
+  background: var(--surface);
+}
+
+.principle h3, .projects h3 {
+  font-size: 1.125rem;
+  letter-spacing: -0.025em;
+}
+
+.principle p {
+  margin-top: 0.65rem;
+  color: var(--muted);
+}
+
+.projects li {
+  display: grid;
+  grid-template-columns: minmax(8rem, 1fr) minmax(0, 2.25fr) auto;
+  align-items: baseline;
+  gap: 0.5rem 1rem;
+  padding-block: 1.125rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.projects li:first-child {
+  border-top: 1px solid var(--line);
+}
+
+.projects p {
+  color: var(--muted);
+}
+
+.project-status {
+  width: fit-content;
+  padding: 0.25rem 0.5rem;
+  border: 1px solid var(--accent-line);
+  border-radius: 0.25rem;
+  color: var(--accent);
+  font: 0.875rem / 1.35 var(--mono);
+}
+
+.development {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: start;
+  gap: 1.5rem 3rem;
+}
+
+.development .section-heading {
+  margin-bottom: 0;
+}
+
+.development-status {
+  padding-inline: 1.25rem;
+  border: 1px solid var(--line);
+  border-radius: 0.5rem;
+  background: var(--surface);
+}
+
+.development-status > div {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 0.25rem 0.75rem;
+  padding-block: 0.875rem;
+}
+
+.development-status > div + div {
+  border-top: 1px solid var(--line);
+}
+
+.development-status dt {
+  color: var(--muted);
+}
+
+.site-footer {
+  border-top: 1px solid var(--line);
+  background: var(--surface);
+}
+
+.footer-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem 1.5rem;
+  padding-block: 2rem;
+}
+
+.footer-note, .footer-status {
+  color: var(--muted);
+  font-size: 0.875rem;
+}
+
+.footer-note {
+  margin-top: 0.375rem;
+}
+
+.footer-inner a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+}
+
+@media (max-width: 58rem) {
+  .principles {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 47rem) {
+  .hero, .about, .development {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .hero {
+    padding-block: 3.75rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(3.65rem, 15vw, 6.75rem);
+  }
+
+  .about .section-label {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 32rem) {
+  .header-inner {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 0.375rem 1.25rem;
+  }
+
+  nav .nav-github {
+    padding-inline: 0.625rem;
+  }
+
+  .projects li {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+
+  .projects p {
+    grid-row: 2;
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 24rem) {
+  .principles {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .development-status > div {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  a {
+    transition: none;
+  }
+}
