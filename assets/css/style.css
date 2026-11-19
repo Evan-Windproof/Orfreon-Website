@@ -474,3 +474,40 @@ nav .nav-github:hover {
     transition: none;
   }
 }
+
+/* Lightweight language navigation. No JavaScript required. */
+nav .language-switch {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 0.15rem;
+  padding-inline-start: 0.5rem;
+  border-inline-start: 1px solid var(--line);
+}
+
+nav .language-switch a {
+  min-height: 2.5rem;
+  padding-inline: 0.375rem;
+  font-size: 0.8125rem;
+  white-space: nowrap;
+}
+
+nav .language-switch a[aria-current="page"] {
+  color: var(--accent);
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+html[lang^="zh"] .eyebrow,
+html[lang^="zh"] .section-label,
+html[lang^="zh"] .architecture figcaption,
+html[lang^="zh"] .hero-status,
+html[lang^="zh"] .project-status {
+  font-family: system-ui, sans-serif;
+  letter-spacing: 0.035em;
+}
+
+@media (max-width: 40rem) {
+  .header-inner { flex-wrap: wrap; }
+  nav ul { gap: 0.25rem 0.75rem; }
+}
